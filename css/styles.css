@@ -4,13 +4,7 @@
     box-shadow: none !important;
   }
 
-#container_home, #container_sobre{
-    height: 100vh !important;
-}
 
-#container_img_ifood, #container_img{
-    height: 100%;
-}
 
 
 #main_img{
@@ -21,3 +15,4 @@
 #container_ifood{
     flex-grow: 1; 
 }
+

@@ -15,4 +15,37 @@
 #container_ifood{
     flex-grow: 1; 
 }
+#container_essencia {
+  height: 100vh;
+  padding: 0;
+}
 
+.blue-block {
+  height: 60vh;
+}
+
+.blue-block-content {
+  height: 100%;
+}
+
+.red-block {
+  height: 40vh;
+}
+
+.green-block {
+  height: 60vh;
+
+}
+
+.gold-block {
+  height: 40vh;
+  z-index: 1;
+}
+
+
+
+.top-right-image {
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

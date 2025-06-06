@@ -1,11 +1,60 @@
+:root{
+  --navbar: #A8672F;
+  --branco: #fff;
+  --marrom-dark: #4E2400;
+  --secundaria: #A8672F;
+  --cor-fonte-bototes: #FFC040;
+  --bg-principal: #F9E5D5;
+  --vermelho-fontes: #720000;
+  --preto: #000;
+  --container-essencia: #E2A833;
+  --containers-off-white: #FFF2E8;
+}
+*{
+  color: var(--preto);
+}
+.navbar{
+  background-color: var(--navbar);
+}
+.navbar a{
+  color: var(--branco);
+}
 
-  .navbar-toggler:focus {
+.navbar a:hover{
+  color: var(--marrom-dark);
+}
+
+.navbar-toggler:focus {
     outline: none;
-    box-shadow: none !important;
-  }
+    box-shadow: none ;
+    color: var(--branco);
+}
 
+.btn {
+  background-color: var(--marrom-dark);
+  border: none;
+  color: var(--cor-fonte-bototes) !important;
+}
 
+.btn:hover {
+  background-color: var(--cor-fonte-bototes) ;
+  color: var(--marrom-dark) !important;
+  border: none;
+  opacity: 0.7;
+  transition: .4s;
+}
 
+#container_home{
+  background-color: var(--bg-principal);
+}
+h1, h2{
+  color: var(--cor-fonte-bototes);
+  font-size: 55px;
+  font-weight: bold;
+}
+span{
+  color: var(--vermelho-fontes);
+}
 
 #main_img{
     max-height: 75vh;
@@ -15,37 +64,57 @@
 #container_ifood{
     flex-grow: 1; 
 }
+
+#container-novidades{
+  background-color: var(--containers-off-white);
+}
 #container_essencia {
+  position: relative; 
+  background-color: var(--branco);
   height: 100vh;
-  padding: 0;
 }
 
-.blue-block {
+
+.bloco-principal {
   height: 60vh;
+  background-color: var(--container-essencia);
 }
 
-.blue-block-content {
+.bloco-principal-conteudo {
   height: 100%;
 }
 
-.red-block {
+.bloco-avaliacao {
   height: 40vh;
+  background-color: var(--branco);
 }
 
-.green-block {
-  height: 60vh;
-
-}
-
-.gold-block {
-  height: 40vh;
-  z-index: 1;
-}
 
 
 
 .top-right-image {
-  top: 0;
+  top: -40px;
   right: 0;
   z-index: 10;
+}
+
+
+
+
+h2{
+  color: var(--vermelho-fontes);
+}
+
+
+
+
+#container_historia{
+  background-color: var(--containers-off-white);
+  z-index: 1;
+}
+
+#img-essencia{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

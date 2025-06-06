@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Couple Cookies</title>
     <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
@@ -16,9 +17,9 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container-fluid">
-            <!-- Logo e botão toggle -->
-            <img src="/assets/imgs/logo.png" alt="Logo" width="50" height="44"
-                class="d-inline-block align-text-top me-3">
+            <a href="#container_home"> <img src="/assets/imgs/logo.png" alt="Logo" width="50" height="44"
+                    class="d-inline-block align-text-top me-3"></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,8 +37,8 @@
 
                 <div class="">
                     <div class="d-flex justify-content-center w-100">
-                            <a class="btn cardapio fw-bold" target="_blank"
-                                href="https://couple-cookies.ola.click/products">Cardápio</a>
+                        <a class="btn btn-navbar fw-bold" target="_blank"
+                            href="https://couple-cookies.ola.click/products">Cardápio</a>
                         </button>
                     </div>
                 </div>
@@ -47,12 +48,12 @@
 
     <!-- container principal -->
     <section id="container_home">
-        <div class="container-fluid">
-            <div class="row min-vh-100">
+        <div class="container-fluid py-0">
+            <div class="row min-vh-100 mb-4 ms-3">
 
                 <div class="col-md-6 p-4 d-flex flex-column justify-content-center align-items-start text-white">
                     <h1>Cookies <span>caseiros e quentinhos assados na hora</span> direto pra você!</h1>
-                    <button type="button" class="btn btn-light mt-3 align-self-center">Peça já!</button>
+                    <button type="button" class="btn mt-3 align-self-center">Peça já!</button>
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-center align-items-center overflow-hidden p-0"
@@ -61,8 +62,8 @@
                         <div class="mb-3">
                             <img src="/assets/imgs/main_cookie.png" class="img-fluid" id="main_img">
                         </div>
-                        <div class="text-end w-100 pe-4"">
-                          <strong class=" me-3">Nota 4.9 no</strong>
+                        <div class="text-end w-100 pb-4">
+                            <strong class=" me-2">Nota 4.9 <i class="bi bi-star-fill"></i> no</strong>
                             <img src="assets/imgs/ifood.png">
 
                         </div>
@@ -82,7 +83,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, tempora
                         atque? Quibusdam, quod non quisquam autem ab unde repellat sit.</p>
                     <div class="w-100 d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary">Experimente!</button>
+                        <button type="button" class="btn mb-3">Experimente!</button>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-start overflow-hidden"
@@ -188,7 +189,7 @@
         </div>
     </section>
 
-     <!-- container essencias-->
+    <!-- container essencias-->
     <section id="container_essencia" class="container-fluid vh-100 p-0">
         <div class="row h-100 g-0">
 
@@ -201,12 +202,28 @@
                         <h3 class="text-end">E é isso que torna a couple tão especial</h3>
                     </div>
                 </div>
-
-                <div class="bloco-avaliacao flex-grow-0">
-                    <div class="h-100 d-flex justify-content-center align-items-center">
-                        Imagens avaliacao
+                <div class="bloco-avaliacao d-flex align-items-center overflow-hidden">
+                    <div class="container overflow-auto" style="max-height: 80vh;">
+                        <div class="row w-100 mt-4">
+                            <div class="col-12 col-md-6 mb-3 d-flex justify-content-center">
+                                <div class="card" style="max-height: 100%; overflow-y: auto;">
+                                    <img src="assets/imgs/super_restaurante.png" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body text-center">
+                                        <p class="card-text">Somos um super restaurante =)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-5 d-flex justify-content-center">
+                                <div class="card">
+                                    <img src="assets/imgs/google_reviews.png" class="card-img-top img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
+
 
             </div>
 
@@ -228,6 +245,30 @@
 
             </div>
 
+        </div>
+    </section>
+
+    <!-- break pra os containers nao serem sobrepostos a imagem acima-->
+    <div class="container-fluid vh-100 d-block d-md-none"><br></div>
+
+    <!-- container historia -->
+    <section id="container_historia">
+        <div class="container-fluid vh-100 p-0">
+            <div class="row vh-100 flex-column flex-md-row mx-1">
+                <div class="col d-flex align-items-center">
+                    <div class="w-100 text-center">
+                        <h2 class="text-start">Do <span>couple</span> aos <span>cookies</span></h2>
+                        <img class="img-fluid" src="assets/imgs/casal.png" alt="Casal">
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa veritatis molestiae ea porro
+                        laborum, neque sint deleniti excepturi rem explicabo nulla unde ad voluptas cumque
+                        necessitatibus eum id perspiciatis corporis. Iure, eveniet. Omnis cum corrupti dolores, odio
+                        suscipit non sapiente iste minus vitae consectetur, ipsam corporis, impedit veritatis error
+                        voluptate.</p>
+                </div>
+            </div>
         </div>
     </section>
 

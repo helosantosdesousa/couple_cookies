@@ -115,6 +115,10 @@ span{
   background-color: var(--containers-off-white);
 }
 
+#container_novidades p{
+  text-indent: 2em;
+}
+
 /*container essencia*/
 #container_essencia {
   position: relative; 

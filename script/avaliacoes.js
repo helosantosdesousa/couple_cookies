@@ -1,26 +1,34 @@
 const avaliacoes = [
   {
-    texto: "Produto excelente, superou minhas expectativas! Recomendo.",
-    nome: "João Silva",
+    texto: "Muito delícia, comprei de indicação de uma amiga e amei.",
+    nome: "Ifood",
     estrelas: 5
   },
   {
-    texto: "Entrega rápida e qualidade ótima, comprarei novamente.",
-    nome: "Maria Oliveira",
-    estrelas: 4
+    texto: "O melhor cookie que já comi em minha vida! Quentinho, bem recheado, gostoso, pontual e tudo de bom. Amo",
+    nome: "Ifood",
+    estrelas: 5
   },
   {
-    texto: "Gostei bastante, atendimento também foi muito bom.",
-    nome: "Carlos Pereira",
+    texto: "Cookie delicioso! Pedimos toda semana o de chocolate e o de bolo de cenoura!",
+    nome: "Ifood",
+    estrelas: 5
+  },
+  {
+    texto: "Cookie delicioso! Pedimos toda semana o de chocolate e o de bolo de cenoura!",
+    nome: "Ifood",
+    estrelas: 5
+  },
+  {
+    texto: "Reunião de família, família toda reunida pedindo cookies pós pizza ❤️❤️",
+    nome: "Instagram",
     estrelas: 5
   }
 ];
 
 const carouselInner = document.getElementById('carouselInner');
-const carouselIndicators = document.getElementById('carouselIndicators');
 
 avaliacoes.forEach((avaliacao, index) => {
-  // Cria o item do carrossel
   const divItem = document.createElement('div');
   divItem.classList.add('carousel-item');
   if(index === 0) divItem.classList.add('active');
@@ -36,15 +44,4 @@ avaliacoes.forEach((avaliacao, index) => {
   `;
 
   carouselInner.appendChild(divItem);
-
-  const buttonIndicator = document.createElement('button');
-  buttonIndicator.type = "button";
-  buttonIndicator.setAttribute('data-bs-target', '#avaliacoesCarousel');
-  buttonIndicator.setAttribute('data-bs-slide-to', index);
-  buttonIndicator.setAttribute('aria-label', `Avaliação ${index + 1}`);
-  if(index === 0) {
-    buttonIndicator.classList.add('active');
-    buttonIndicator.setAttribute('aria-current', 'true');
-  }
-  carouselIndicators.appendChild(buttonIndicator);
 });

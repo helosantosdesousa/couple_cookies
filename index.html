@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#container_home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#container_novidades">Novidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container_feedback">Avaliações</a></li>
                     <li class="nav-item"><a class="nav-link" href="#container_essencia">Nossa essência</a></li>
                     <li class="nav-item"><a class="nav-link" href="#container_historia">História</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#container_atendimento">Fale conosco</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#atendimento">Fale conosco</a></li>
                 </ul>
 
                 <div class="">
@@ -74,66 +74,62 @@
     </section>
 
 
-    <!-- container novidades-->
- <section id="container_novidades">
-  <h1>Cookie do mês</h1>
-  <p id="cookie-descricao"></p>
-<img id="img-cookie" src="https://drive.google.com/thumbnail?id=1Zd_2cIHdl_siqSSHMFTpQF8Y_eizwMXX"
- alt="Cookie do mês" style="max-width: 300px;" />
+
+  <!-- container avaliacoes-->
+    <section id="container_feedback" class="p-0 py-5 m-0">
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Avaliações de clientes</h2>
+
+        <div id="avaliacoesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
+                            <p class="fs-5">"Produto excelente! Chegou no prazo e superou minhas expectativas."</p>
+                            <strong>- João S.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
+                            <p class="fs-5">"Atendimento ótimo e qualidade impecável. Recomendo!"</p>
+                            <strong>- Maria F.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
+                            <p class="fs-5">"Muito satisfeito com a compra, voltarei a comprar com certeza."</p>
+                            <strong>- Carlos A.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#avaliacoesCarousel"
+                data-bs-slide="prev">
+                <i class="bi bi-chevron-left" style="font-size: 2rem; color: black;"></i>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#avaliacoesCarousel"
+                data-bs-slide="next">
+                <i class="bi bi-chevron-right" style="font-size: 2rem; color: black;"></i>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+
 </section>
 
-<script>
-  const sheetID = '1hk2SAOjQ4b3wYU3O3ZpPj3An9tXDql248GpKCOLBe5E';
-  const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
 
-  fetch(url)
-    .then(res => {
-      if (!res.ok) throw new Error(`Erro ao acessar a planilha: ${res.status}`);
-      return res.text();
-    })
-    .then(dataText => {
-      const match = dataText.match(/google.visualization.Query.setResponse\((.*)\);/);
-      const jsonString = match ? match[1] : dataText.substring(dataText.indexOf('{'), dataText.lastIndexOf('}') + 1);
-      const data = JSON.parse(jsonString);
-      const rows = data.table.rows;
 
-      if (rows.length === 0) {
-        document.getElementById('cookie-descricao').textContent = "Nenhuma atualização encontrada.";
-        document.getElementById('img-cookie').style.display = 'none';
-        return;
-      }
-
-      const lastRow = rows[rows.length - 1];
-
-      const textoCookie = lastRow.c[1] ? lastRow.c[1].v : "";
-      const rawImageURL = lastRow.c[2] ? lastRow.c[2].v : "";
-
-      // Extrai o ID da imagem da URL
-      const idMatch = rawImageURL.match(/id=([a-zA-Z0-9_-]+)/);
-      const imageID = idMatch ? idMatch[1] : null;
-      const finalImgURL = imageID ? `https://drive.google.com/thumbnail?id=${imageID}` : "";
-
-      document.getElementById('cookie-descricao').textContent = textoCookie;
-
-      const imgElement = document.getElementById('img-cookie');
-      if (finalImgURL) {
-        imgElement.src = finalImgURL;
-        imgElement.alt = "Imagem do Cookie do Mês";
-        imgElement.style.display = 'block';
-      } else {
-        imgElement.style.display = 'none';
-      }
-    })
-    .catch(err => {
-      console.error("Erro:", err);
-      document.getElementById('cookie-descricao').textContent = "Erro ao carregar o conteúdo.";
-      document.getElementById('img-cookie').style.display = 'none';
-    });
-</script>
-
-    
     <!-- container essencias-->
-    <section id="container_essencia" class="container-fluid vh-100 p-0">
+    <section id="container_essencia" class="container-fluid vh-100 p-0 m-0">
         <div class="row h-100 g-0">
 
             <div class="col-12 col-md-6 d-flex flex-column flex-wrap">
@@ -200,7 +196,7 @@
     <div class="container-fluid vh-100 d-block d-md-none"><br></div>
     <!-- container historia -->
     <section id="container_historia">
-        <div class="container-fluid min-vh-100 p-0">
+        <div class="container-fluid min-vh-100 m-0 p-0">
             <div class="row flex-column flex-md-row mx-1">
                 <div class="col d-flex align-items-center">
                     <div class="w-100 text-center">
@@ -219,7 +215,7 @@
         </div>
     </section>
 
-    <div class="breaker container-fluid p-0">
+    <div class="breaker container-fluid p-0" id="atendimento">
         <br>
         <div class="container-fluid p-0">
             <div class="row g-0">
@@ -310,6 +306,7 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
     <script src="script/containers.js"></script>
+    <script src="script/avaliacoes.js"></script>
 </body>
 
 </html>

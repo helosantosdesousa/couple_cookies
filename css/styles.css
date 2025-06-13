@@ -99,12 +99,12 @@
 h1{
   color: var(--cor-fonte-bototes);
   font-family: var(--fonte-titulo);
-font-size: clamp(3rem, 5vw, 3.5rem);
+font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.2;
   max-width: 80vw;
   margin: 0 auto;
-  word-wrap: break-word;
   word-break: normal;
+overflow-wrap: break-word;
 }
 
 span{
@@ -191,6 +191,11 @@ h2{
   font-family: var(--fonte-titulo);
   word-break: normal;
 overflow-wrap: break-word;
+
+}
+
+.essencia-texto{
+    color: var(--vermelho-fontes);
 
 }
 

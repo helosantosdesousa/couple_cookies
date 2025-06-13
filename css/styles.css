@@ -103,8 +103,8 @@ font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.2;
   max-width: 80vw;
   margin: 0 auto;
-  word-break: normal;
-overflow-wrap: break-word;
+word-break: break-word;
+
 }
 
 span{

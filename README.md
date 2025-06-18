@@ -2,6 +2,8 @@
 
 Uma landing page desenvolvida para a **Couple Cookies**, uma loja especializada em cookies artesanais. O site apresenta a história da marca, seus diferenciais e informações de contato.
 
+![Gif demonstrando o site desenvolvido](assets/demo_cookies.gif)
+
 ## 📸 Visão Geral
 
 A página foi criada com o objetivo de representar visualmente a identidade da loja, transmitindo seu charme, carinho e sabor através de um design simples e acolhedor.

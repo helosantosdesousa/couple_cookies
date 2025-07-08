@@ -33,13 +33,14 @@
   --marrom-dark: #4E2400;
   --secundaria: #A8672F;
   --cor-fonte-bototes: #FFC040;
-  --bg-principal: #fff9f4;
+  --bg-principal: #fbfbfb;
   --vermelho-fontes: #720000;
   --preto: #000;
   --container-essencia: #E2A833;
   --containers-off-white: #FFF2E8;
   --textos-escuros: #4A2200;
   --amarelo-footer: #FFAB00;
+  --btn-parceiro: #f3a202;
 
   --fonte-padrao: 'Bobby-jones';
   --fonte-titulos-principais: 'Luckiest Guy';
@@ -217,28 +218,61 @@ h3 {
   border: none;
 }
 
-/*container historia */
-
-#container_historia {
-  background-color: var(--containers-off-white);
-  z-index: 1;
-  color: var(--container-essencia);
+/*container parceiros */
+#container_parceiros{
+  background-color: var(--bg-principal);
+  
+}
+.parceiro{
+  color: var(--vermelho-fontes);
+  font-family: var(--fonte-padrao);
 }
 
-#container_historia h2 {
-  color: var(--container-essencia);
+.card-logos{
+  object-fit: contain;
+   height: 170px;
+}
+
+.btn-parceiro{
+    background-color: var(--bg-principal);
+  color: var(--vermelho-fontes);
+}
+
+.btn-parceiro i{
+    color: var(--vermelho-fontes);
 
 }
 
-.overlay {
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: var(--containers-off-white);
+.btn-parceiro:hover{
+    background-color: var(--btn-parceiro);
+  transition: .5s;
+  color: var(--vermelho-fontes);
 }
 
-.position-relative:hover .overlay {
-  opacity: 0.07;
+
+.btn-parceria{
+  background-color: var(--vermelho-fontes);
+  color: var(--amarelo-footer);
 }
+
+.btn-parceria {
+  transition: 0.5s;
+}
+
+.btn-parceria:hover {
+  background-color: var(--bg-principal); 
+  color: var(--vermelho-fontes);
+}
+
+.btn-parceria:hover i {
+  color: var(--vermelho-fontes);
+}
+
+.btn-parceria i {
+  transition: 0.5s;
+  color: var(--amarelo-footer); 
+}
+
 
 
 /*container atendimento*/

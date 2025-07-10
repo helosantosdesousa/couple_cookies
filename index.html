@@ -1,16 +1,422 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Couple Cookies</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  </body>
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container-fluid">
+            <a href="#container_home"> <img src="assets/imgs/logo.png" alt="Logo" width="50" height="44"
+                    class="d-inline-block align-text-top me-3"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#container_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container_feedback">Avaliações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container_essencia">Nossa essência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container_parceiros">Parceiros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#container_atendimento">Fale conosco</a></li>
+                </ul>
+
+                <div class="">
+                    <div class="d-flex justify-content-center w-100">
+                        <a class="btn btn-navbar fw-bold" target="_blank"
+                            href="https://couplecookies.menudino.com">Cardápio</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- container principal -->
+    <section id="container_home">
+        <div class="container-fluid py-0">
+            <div class="row min-vh-100 mb-4 ms-3">
+
+                <div class="col-md-6 p-4 d-flex flex-column justify-content-center align-items-start text-white">
+                    <h1>Cookies <span>caseiros e quentinhos assados na hora</span> direto pra você!</h1>
+                    <button type="button" class="btn mt-3 align-self-center px-4 py-2 fs-5 fs-md-3">
+                        <a href="https://couplecookies.menudino.com"></a>
+                        Peça já!</button>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-center align-items-center overflow-hidden p-0"
+                    id="container_img_ifood">
+                    <div class="text-center text-white">
+                        <div class="mb-3">
+                            <img src="assets/imgs/main_cookie.png" class="img-fluid" id="main_img"
+                                alt="
+A imagem mostra um cookie de chocolate cortado ao meio pulsante, revelando um recheio cremoso e dourado, que se assemelha a doce de leite. O doce tem uma casca externa de chocolate escuro e parece ter uma textura macia, quase como um bolo ou biscoito denso. Há também um pouco de calda de chocolate escorrendo sobre o recheio e a casca, sugerindo um acabamento ainda mais indulgente. A peça está dividida horizontalmente, exibindo claramente as duas metades com o recheio abundante. O fundo da imagem é predominantemente claro, com uma forma orgânica de cor bordô ou marrom escura atrás do doce, que realça o objeto principal.">
+                        </div>
+                        <div class="text-end w-100 pb-4">
+                            <strong class=" me-2">Nota 5 <i class="bi bi-star-fill"></i> no</strong>
+                            <img src="assets/imgs/ifood.png">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- container avaliacoes-->
+    <section id="container_feedback" class="p-0 py-5 m-0">
+
+        <div class="container my-5">
+            <h2 class="text-center mb-4 text-avaliacao fs-1">Avaliações de clientes</h2>
+
+            <div id="avaliacoesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="carouselInner"></div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#avaliacoesCarousel"
+                    data-bs-slide="prev">
+                    <i class="bi bi-chevron-left" style="font-size: 2rem; color: black;"></i>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#avaliacoesCarousel"
+                    data-bs-slide="next">
+                    <i class="bi bi-chevron-right" style="font-size: 2rem; color: black;"></i>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- container essencias-->
+    <section id="container_essencia" class="container-fluid vh-100 p-0">
+        <div class="row h-100 g-0">
+
+            <div class="col-12 col-md-6 d-flex flex-column flex-wrap">
+
+                <div class="bloco-principal flex-grow-0">
+                    <div
+                        class="bloco-principal-conteudo h-100 d-flex justify-content-center align-items-center flex-column">
+                        <h1 class="essencia-texto text-start ps-3">Acreditamos que quem ama, capricha</h1>
+                        <h3 class="text-end w-100 px-3 px-md-5 mt-3 fs-2">E é isso que torna a couple tão especial.</h3>
+                    </div>
+                </div>
+                <div class="bloco-avaliacao d-flex align-items-center overflow-hidden">
+                    <div class="container overflow-auto">
+                        <div class="row w-100 mt-4">
+                            <div class="col-12 col-md-6 mb-3 d-flex justify-content-center">
+                                <div class="card overflow-y-auto">
+                                    <a target="_blank"
+                                        href="https://www.ifood.com.br/delivery/peruibe-sp/couple-cookies-cidade-nova-peruibe/d5ccbf8e-59c9-4f32-88b4-72daea547471?srsltid=AfmBOopm-wroozaGMk_8qiEaLCswj8vXJzJhcjy2Z6ZdiONYHmgM1h6H"><img
+                                            src="assets/imgs/super_restaurante.png" class="card-img-top img-fluid"
+                                            alt="A imagem apresenta a marca 'Couple Cookies' com seu logotipo e destaca sua alta avaliação, reforçada pelo selo de 'Super Restaurante' do iFood e uma pontuação de 5.0 estrelas."></a>
+                                    <div class="card-body text-center">
+                                        <p class="card-text">Somos um super restaurante =)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-5 d-flex justify-content-center">
+                                <div class="card">
+                                    <a target="_blank" href="https://g.co/kgs/6pMEyaS"><img
+                                            src="assets/imgs/google_reviews.png" class="card-img-top img-fluid"
+                                            alt="A imagem exibe o logo do Google Reviews.
+
+Na parte superior, está a palavra 'Google' com suas cores características. Abaixo da palavra 'Google', em um texto menor e na cor cinza, está a palavra 'Reviews'. 
+Ao lado de 'Reviews', há cinco estrelas douradas completamente preenchidas, dispostas em linha, indicando uma avaliação de 5 estrelas (a pontuação máxima). A imagem está em um fundo branco, o que realça os elementos coloridos e o texto."></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="col-12 col-md-6 d-flex flex-column position-relative overflow-hidden">
+
+                <div class="bloco-principal flex-grow-0 position-relative overflow-visible">
+
+                    <div class="h-100 d-flex justify-content-center align-items-center order-2 position-relative">
+                        <img src="assets/imgs/essencia_cookie.png"
+                            alt="
+A imagem exibe um pedaço de cookie cortado ao meio, revelando um recheio abundante de cor amarela vibrante e textura cremosa. Uma mão está segurando a parte de baixo do cookie, enquanto outra mão, no canto superior esquerdo, derrama um líquido dourado e viscoso, que parece é mel, sobre o recheio exposto. O recheio amarelo escorre um pouco, dando a impressão de ser bem macio e talvez quente. O fundo da imagem é dividido horizontalmente: a parte superior é de um tom de amarelo mostarda sólido, enquanto a parte inferior é branca. A cena sugere um alimento doce, indulgente e reconfortante."
+                            class="img-fluid position-absolute top-right-image">
+                    </div>
+
+                </div>
+
+                <div class="bloco-avaliacao flex-grow-0 order-3 z-1">
+                    <div class="h-100 d-flex justify-content-center align-items-center">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- break pra os containers nao serem sobrepostos a imagem acima-->
+    <div class="container-fluid vh-100 d-block d-md-none"><br></div>
+
+    <!-- container de parceiros -->
+    <section id="container_parceiros" class="container-fluid py-5">
+        <div class="container">
+            <h1 class="parceiro text-center pb-3">Nossos parceiros</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_knn.jpeg" class="card-img-top card-logos"
+                                    alt=" A imagem apresenta o logotipo da KNN Idiomas, uma rede de escolas de idiomas. O design é marcante e vibrante">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">Alunos da KNN Idiomas Peruíbe têm desconto na Couple
+                                    Cookies, e quem é cliente da Couple Cookies também ganha desconto na escola!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-parceiro"
+                                        href="https://www.knnidiomas.com.br/unidades/knn-peruibe" role="button"
+                                        target="_blank">Saiba mais <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_cav.png" class="card-img-top card-logos" alt="O logotipo exibido apresenta um design moderno e minimalista da marca CAV. À esquerda, vê-se um círculo preto incompleto que transmite sensação de movimento, enquanto no interior está uma figura laranja semelhante a um triângulo arredondado ou seta, evocando dinamismo e direção. À direita do ícone, a sigla “CAV” aparece em letras maiúsculas pretas com tipografia limpa e impactante, reforçando uma imagem de profissionalismo, energia e inovação.">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">Por trás da nossa imagem está uma assessoria de marketing criativa, que transforma
+                                ideias em presença e dá vida à nossa comunicação.</p>
+                                <div class="d-flex justify-content-center mt-1">
+                                    <a class="btn btn-parceiro" href="https://lp.cavinovacao.com.br/cav-accelerator-assessoria-de-marketing-vendas?utm_source=client&utm_medium=couplecookies&utm_campaign=couplecookies"
+                                    role="button" target="_blank">Saiba mais <i
+                                        class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_heloisa.png" class="card-img-top card-logos grandes"
+                                    alt="O logotipo apresentado traz as letras “HS” em fonte maiúscula, espessa e com coloração rosa vibrante. A proximidade entre as letras cria uma composição compacta e marcante, transmitindo uma identidade visual ousada e contemporânea, com foco em destaque e estilo.">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">
+                                Cada cantinho desse site foi pensado e criado pela Helô, que transformou nossa ideia em um site bonito, funcional e com a nossa cara.    
+                            </p>
+                                <div class="d-flex justify-content-center mt-1">
+                                    <a class="btn btn-parceiro"
+                                        href="https://helosantosdesousa.github.io/Portifolio-helo-2025/" role="button"
+                                        target="_blank">Saiba mais <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_lanches.jpg" class="card-img-top card-logos grandes"
+                                    alt="A imagem apresenta o logotipo da Santualho Bagueteria & Cia dentro de um círculo com fundo preto. No centro, há a ilustração de um pão baguete estilizado, na cor laranja, que remete ao principal produto oferecido pela marca. Contornando o desenho, encontra-se o nome completo “Santualho Bagueteria & Cia” escrito em letras maiúsculas laranjas, criando contraste com o fundo escuro e reforçando a identidade visual da empresa.">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">
+                                    Comida boa é feita com amor - e com o apoio dos nossos amigos que também capricham. Juntos, garantimos aquele gostinho especial que só tem aqui.
+                                </p>
+                                <div class="d-flex justify-content-center mt-1">
+                                   <a class="btn btn-parceiro"
+                                    href="https://www.instagram.com/santualhoperuibe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" role="button"
+                                    target="_blank">Saiba mais <i
+                                        class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_authentic.png" class="card-img-top card-logos"
+                                    alt="A imagem exibe um logotipo elegante com as palavras “BE AUTHENTIC” em destaque, em letras maiúsculas douradas. Logo abaixo, em uma fonte menor, está o termo “ACESSÓRIOS”, também em dourado. No topo do logotipo, há um ícone geométrico que remete a uma gema ou diamante estilizado, transmitindo sofisticação e brilho.">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">Peças que traduzem sua essência com delicadeza.
+Semijoias, prata 925 e acessórios feitos para marcar seus melhores momentos.</p>
+                                <div class="d-flex justify-content-center mt-1">
+                                    <a class="btn btn-parceiro"
+                                        href="https://www.instagram.com/beauthentic.acessorios/" role="button"
+                                        target="_blank">Saiba mais <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="flip-card flex-fill">
+                        <div class="flip-card-inner shadow rounded-3">
+                            <div class="flip-card-front">
+                                <img src="assets/imgs/logo_tramas.png" class="card-img-top card-logos"
+                                    alt="A imagem traz um desenho estilizado e monocromático de um novelo de lã, com duas agulhas de tricô cruzadas sobre ele e uma agulha de crochê ao lado. No centro do novelo, está escrita a palavra “tramas” em letras minúsculas">
+                            </div>
+                            <div class="flip-card-back card-body d-flex flex-column justify-content-center">
+                                <p class="card-text text-center">
+                                    Roupas de crochê feitas com carinho, criadas para destacar a sua essência única.
+                                </p>
+                                <div class="d-flex justify-content-center mt-1">
+                                    <a class="btn btn-parceiro"
+                                        href="https://www.instagram.com/tramas.oficial/" role="button"
+                                        target="_blank">Saiba mais <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="d-flex flex-column flex-sm-column flex-md-row justify-content-center align-items-center gap-3 text-center w-100 mt-5">
+                <h3 class="mb-0 parceria fs-2">Topa se juntar com a gente?</h3>
+                <a class="btn btn-parceria mt-md-0 fw-medium" href="https://wa.me/13997577902" role="button"
+                    target="_blank">
+                    Manda um oi! <i class="bi bi-whatsapp ms-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- container atendimento -->
+    <section id="container_atendimento">
+        <div class="container-fluid p-0 quadrantes-container">
+
+            <div class="quadrante contato col-12 col-md-6 d-flex p-0">
+                <div class="img-container w-100">
+                    <img src="assets/imgs/cookie_atendimento.png"
+                        alt="A imagem apresenta um cookie do tipo S'mores, cortado e visto de perfil, com camadas bem distintas e convidativas. No topo e na base, há biscoitos de cor dourada e textura crocante. Entre essas duas camadas de biscoito, encontra-se um generoso recheio de chocolate derretido e cremoso, com uma tonalidade marrom escura e um brilho que indica sua fluidez. Envolvendo o chocolate e se estendendo para fora, há marshmallow tostado e derretido, de cor branca com algumas partes caramelizadas (marrom-claro), exibindo uma textura elástica e pegajosa, com fios visíveis de marshmallow esticado. O fundo da imagem é de um tom de marrom sólido. O doce parece ser bastante indulgente e recém-preparado, com o marshmallow e o chocolate ainda quentes e derretidos."
+                        id="img-atendimento" />
+                </div>
+            </div>
+
+            <div
+                class="quadrante contato col-12 col-md-6 d-flex flex-column text-white align-items-center justify-content-center text-center">
+                <h2>Dúvidas ou pedidos?</h2>
+                <p class="mt-3"> <a href="mailto:couplecookiesperuibe@gmail.com"
+                        class="link-email text-decoration-none">couplecookiesperuibe@gmail.com</a></p>
+                <p><a href="tel:+5513997577902" class="link-phone text-decoration-none">(13) 99757-7902</a></p>
+                <ul class="list-unstyled d-flex flex-nowrap flex-md-row justify-content-center gap-4">
+                    <li><a href="https://www.instagram.com/couplecookiesoficial/" target="_blank"> <i
+                                class="bi bi-instagram fs-2"></i></a></i>
+                    <li><a href="https://wa.me/13997577902" target="_blank"> <i class="bi bi-whatsapp fs-2"></i></a></i>
+                    <li><a href="https://couplecookies.menudino.com" target="_blank"> <i
+                                class="bi bi-basket2 fs-2"></i></a></i></li>
+                </ul>
+            </div>
+
+            <div
+                class="quadrante funcionamento col-12 col-md-6 d-flex flex-column text-white align-items-center justify-content-center">
+                <h2>Horário</h2>
+                <div class="d-flex flex-nowrap justify-content-center gap-5 text-start">
+                    <ul class="list-unstyled">
+                        <li>Segunda-feira</li>
+                        <li>Terça-feira</li>
+                        <li>Quarta-feira</li>
+                        <li>Quinta-feira</li>
+                        <li>Sexta-feira</li>
+                        <li>Sábado</li>
+                        <li>Domingo</li>
+                    </ul>
+                    <ul class="list-unstyled text-start">
+                        <li>15h - 22:30</li>
+                        <li>Fechado</li>
+                        <li>Fechado</li>
+                        <li>15h - 22:30</li>
+                        <li>15h - 22:30</li>
+                        <li>15h - 22:30</li>
+                        <li>15h - 22:30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="quadrante funcionamento col-12 col-md-6 d-flex flex-column text-dark align-items-center justify-content-center text-center pb-4">
+                <h2 class="pt-5">Delivery e retirada</h2>
+                <p>Trabalhamos com <span class="fw-bolder">delivery!</span> <i class="bi bi-scooter text-light"></i>
+                </p>
+                <p><span>Prefere retirar? Agende no zap e venha até:</span></p>
+                <p class="fw-normal">R. Japurá, 169 – Cidade Nova Peruíbe<br>11772-084 – Peruíbe - SP</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer
+        class="text-white d-flex flex-column flex-md-row justify-content-around align-items-center text-center py-3 m-0">
+        <div>
+            <p class="mb-0">Peruíbe-SP</p>
+        </div>
+        <div>
+            <p class="mb-0 fw-bold">Couple cookies</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <p class="mb-1">Desenvolvido por <a href="https://www.instagram.com/helocoding/" target="_blank"
+                    class="text-white text-decoration-none">@helocoding</a></p>
+            <a href="https://github.com/helosantosdesousa" target="_blank"
+                class="text-white text-decoration-none">GitHub</a>
+        </div>
+    </footer>
+
+
+
+
+
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+    </script>
+    <script src="script/containers.js"></script>
+    <script src="script/avaliacoes.js"></script>
+</body>
+
 </html>

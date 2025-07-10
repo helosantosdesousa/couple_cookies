@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'Bridge';
-  src: url('/assets/fonts/Bridge.ttf') format('truetype');
+  src: url('../assets/fonts/Bridge.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bobby-jones';
-  src: url('/assets/fonts/Bobby Jones Soft.otf') format('truetype');
+  src: url('../assets/fonts/Bobby Jones Soft.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
   ;
@@ -230,12 +230,87 @@ h3 {
 
 .card-logos{
   object-fit: contain;
-   height: 170px;
+  height: 150px;
 }
+
+
+.flip-card {
+  perspective: 1000px;
+  position: relative;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.flip-card-front {
+  background-color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: var(--branco);
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+
+.card-img-top{
+  padding: 0;      
+  margin: 0 auto;   
+  display: block;   
+  max-width: 90%;   
+  height: auto;     
+}
+
+.grandes{
+
+  padding: 0;       
+  margin: 0 auto;   
+  display: block;   
+  max-width: 40%;   
+
+}
+
+.card {
+  padding: 0.5rem;  
+}
+
 
 .btn-parceiro{
     background-color: var(--bg-principal);
-  color: var(--vermelho-fontes);
+    color: var(--vermelho-fontes);
 }
 
 .btn-parceiro i{
@@ -274,9 +349,7 @@ h3 {
 }
 
 
-
 /*container atendimento*/
-
 
 #container_atendimento {
   display: flex;

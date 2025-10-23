@@ -47,19 +47,30 @@
     --fonte-titulo: 'Goblin One';
 }
 
+/* CORREÇÃO: Previne o scroll horizontal e a faixa branca em telas pequenas */
+html, body {
+    overflow-x: hidden;
+}
 
 * {
     color: var(--preto);
     transition: .4s;
+    box-sizing: border-box; 
 }
 
 /*navbar */
 .navbar {
     background-color: var(--navbar);
+    /* NOVO: Sombra sutil para um visual mais profissional */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem;
 }
 
 .navbar a {
     color: var(--branco);
+    /* NOVO: Transição mais suave na cor do link */
+    transition: color 0.3s ease; 
 }
 
 .navbar a:hover {
@@ -73,26 +84,35 @@
 }
 
 
+/* NOVO/EDITADO: Botão do cardápio */
 .btn-navbar {
     background-color: var(--marrom-dark) !important;
     border: none;
     color: var(--cor-fonte-bototes) !important;
-    font-size: clamp(1rem, 1.5vw, 1.0rem);
+    font-size: clamp(1rem, 1.0vw, 1.0rem);
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    /* NOVO: Transição mais suave e transform */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s; 
 }
 
 .btn-navbar:hover {
     background-color: var(--cor-fonte-bototes) !important;
     color: var(--marrom-dark) !important;
+    opacity: 1; /* Garante opacidade total */
+    transform: translateY(-1px); /* Efeito de 'levantar' no hover */
     border: none;
-    opacity: 0.7;
-    font-size: clamp(1rem, 1.5vw, 1.0rem);
+    font-size: clamp(1rem, 1.0vw, 1.0rem);
     padding: 0.5rem 1rem;
 }
 
+/* NOVO: Estilo para links de navegação */
 .navbar-nav .nav-link {
-    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-size: clamp(1rem, 1.1vw, 1.05rem); 
     padding: 0.5rem 1rem;
+    font-weight: 500; 
+    position: relative;
+    /* Transição de cor já está no .navbar a */
 }
 
 
@@ -105,15 +125,38 @@
 h1 {
     color: var(--cor-fonte-bototes);
     font-family: var(--fonte-titulo);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    /* CORRIGIDO: Retirado o vw e usado apenas rem para controle em mobile (regra específica abaixo) */
+    font-size: clamp(2.5rem, 6vw, 3.5rem); 
     line-height: 1.2;
     max-width: 100%;
     margin: 0 auto;
-    /* Linhas Originais Removidas/Ajustadas para corrigir a quebra em telas pequenas: */
-    /* word-break: keep-all; */
-    /* overflow-wrap: anywhere; */
-
+    /* CORREÇÃO: Removido padding fixo do h1, confiando no padding da coluna */
+    box-sizing: border-box; 
 }
+
+/* Garante que o padding horizontal seja 0 em telas maiores que 768px */
+@media (min-width: 768px) {
+    h1 {
+        padding: 0;
+    }
+}
+
+/* CORREÇÃO MAIS ASSERTIVA: Força a fonte a ser menor em todas as telas pequenas */
+@media (max-width: 767px) {
+    #container_home h1 {
+        /* AUMENTADO: De 2.2rem para 2.3rem */
+        font-size: 2.3rem !important; 
+    }
+}
+
+/* CORREÇÃO DE PADDING: Ajuste o padding da coluna para telas XS */
+@media (max-width: 576px) { 
+    #container_home .row > .col-12:first-child {
+        /* Reduz o padding horizontal para 0.75rem (12px) para dar mais espaço ao texto */
+        padding: 1.5rem 0.75rem !important; 
+    }
+}
+
 
 span {
     color: var(--vermelho-fontes);
@@ -201,10 +244,10 @@ h2 {
     overflow-wrap: break-word;
 
 }
-
 .essencia-texto {
     color: var(--vermelho-fontes);
-
+    /* Garante que o texto use todo o espaço disponível para centralização */
+    width: 100%; 
 }
 
 h3 {
@@ -445,12 +488,22 @@ footer p {
 }
 
 .quadrante {
-    height: 50vh;
+    /* CORREÇÃO: Usando min-height para flexibilidade */
+    min-height: 50vh; 
+    height: auto;
+}
+
+/* Diminui a altura mínima para telas muito pequenas */
+@media (max-width: 576px) {
+    .quadrante {
+        min-height: 40vh; 
+    }
 }
 
 .img-container {
     padding: 0.5rem;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,7 +511,8 @@ footer p {
 
 .img-container img {
     max-width: 100%;
-    max-height: 100%;
+    /* CORREÇÃO: Usando height: auto para melhor ajuste */
+    height: auto; 
     object-fit: contain;
     display: block;
 }
@@ -545,4 +599,19 @@ footer>div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 767px) {
+    #container_essencia h1 {
+        font-size: 2.1rem !important; 
+        padding: 0 10px !important; }
+
+    #container_essencia h3 {
+        font-size: 1.3rem !important; 
+        padding: 0 10px !important; 
+    }
+
+    #container_essencia .bloco-principal-conteudo {
+        overflow-x: hidden;
+    }
 }
